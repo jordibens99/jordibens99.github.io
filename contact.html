@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html> 
+
+<head> 
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+
+
+	<title> Jordi Bens | Contact </title>
+	<link rel="stylesheet" type="text/css" href="./css/style.css">
+</head> 
+ 
+<body>
+	<header>  
+		<div class="container"> 
+			<div id="branding">
+				 <h1><span class="highlight"> Jordi Bens </span></h1>
+			 </div>
+	<nav>
+		<ul class="desktop">
+			<li><a href="index.html"><b>Home</b></a></li>
+			<li><a href="overmij.html"><span>Over mij</span></a></li>
+			
+			<li class="menuItem">
+				<a href="competentie1.html">Competenties Minor</a>
+				<div class="dropdown">
+					<a href="competentie1.html">1. Analyseren</a>
+					<a href="competentie2.html">2. Innoveren</a>
+					<a href="competentie3.html">3. Projectmanagement</a>
+					<a href="competentie4.html">4. Onderzoeken</a>
+					<a href="competentie5.html">5. Communiceren</a>
+					<a href="competentie6.html">6. Samenwerken</a>
+					<a href="competentie7.html">7. Professionaliseren</a>
+				</div>
+			</li>
+
+			<li class="menuItem">
+				<a href="week1.html">Workshop weken</a>
+				<div class="dropdown">
+					<a href="week1.html">1. Kruispunten</a>
+					<a href="week2.html">2. Smart Industry</a>
+					<a href="week3.html">3. Value Proposition</a>
+					<a href="week4.html">4. Processen</a>
+					<a href="week5.html">5. Organisaties</a>
+					<a href="week6.html">6. Samenwerken</a>
+					<a href="week7+.html">7+. Afronding ST / Bedrijfsbezoeken</a>
+				</div>
+			</li>
+				
+			<li><a href="Project.html"><b>Project Kropman</b></a></li>
+
+		
+			<li><a href="contact.html"><span> Contact </span></a></li>
+					
+		</ul>
+	</nav>
+</header>
+
+
+
+<div class="container">
+<h1> Contactformulier</h1>
+  <form action="mail_send.php" method="post" class="contactForm">
+  	<div class="formBlock">
+  		<label for="fname">Voornaam</label>
+    <input type="text" id="fname" name="voornaam" placeholder="Voornaam..">
+  	</div>
+    
+<div class="formBlock">
+    <label for="lname">Achternaam</label>
+    <input type="text" id="lname" name="achternaam" placeholder="Achternaam..">
+      	</div>
+
+
+<div class="formBlock">
+    <label for="provincie">Provincie</label>
+    <select id="provincie" name="provincie">
+      <option value="Groningen">Groningen</option>
+      <option value="Friesland">Friesland</option>
+	  <option value="Drenthe">Drenthe</option>
+	  <option value="Noord-Holland">Noord-Holland</option>
+	  <option value="Flevoland">Flevoland</option>
+	  <option value="Overijsel">Overijsel</option>
+	  <option value="Gelderland">Gelderland</option>
+	  <option value="Utrecht">Utrecht</option>
+	  <option value="Zuid-Holland">Zuid-Holland</option>
+	  <option value="Noord-Brabant">Noord-Brabant</option>
+	  <option value="Zeeland">Zeeland</option>
+	  <option value="Limburg">Limburg</option>
+    </select>
+      	</div>
+
+
+<div class="formBlock">
+    <p>Onderwerp</p>
+    <textarea id="subject" name="onderwerp" placeholder="Bericht.." style="height:200px"></textarea>
+      	</div>
+
+
+	<div class="formBlock">
+    	<input type="submit" value="Verstuur">
+    </div>		
+
+
+  </form>
+
+  <div class="clear"></div>
+
+    <h2 class="contactH2"> Stuur me gerust een berichtje!</h2>
+
+</div>
+
+<section id="main">
+	<div class="container">
+	</div>
+</section>
+	
+</body> 
+
+<footer>
+ 	<div>
+ 		Jordi Bens &copy;
+ 	</div>
+ </footer>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+ <script type="text/javascript">
+ 	$('.menuItem').hover(
+    function(e){ 
+    	console.log("in");
+ 		$(this).find('a').css('display', 'block');
+    }, // over
+    function(e){ 
+    	console.log("out");
+    	$('.dropdown a').css('display', 'none');
+    }  // out
+);
+
+ 	$( document ).ready(function() {
+
+		$( ".cross" ).hide();
+		$( ".menu" ).hide();
+		$( ".hamburger" ).click(function() {
+			$( ".menu" ).slideToggle( "slow", function() {
+				$( ".hamburger" ).hide();
+				$( ".cross" ).show();
+			});
+		});
+
+		$( ".cross" ).click(function() {
+			$( ".menu" ).slideToggle( "slow", function() {
+			$( ".cross" ).hide();
+		$( ".hamburger" ).show();
+		});
+		});
+
+	});
+ </script>
+
+</html> 
