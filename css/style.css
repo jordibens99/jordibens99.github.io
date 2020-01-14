@@ -17,6 +17,11 @@ body a{
 	margin: 0px 20px 10px 40px;
 	overflow: hidden;
 	}
+.hideme {
+	cursor: default;
+	color: black;
+	text-decoration: none;
+}
 
 #main {
 	font:18px/1.5 Arial;
